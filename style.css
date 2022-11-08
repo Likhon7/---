@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.main {
+    width: 600px;
+    height: 430px;
+    border: 5px solid transparent;
+    position: relative;
+}
+
+.ball h4 {
+    width: 150px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    font-size: 22px;
+    top: 2px;
+    transform: translate(-50%, 50%);
+    animation: ball 6s linear infinite;
+}
+
+@keyframes ball {
+    0% {
+        top: 0px;
+        left: 307px;
+        color: #fff;
+        filter: drop-shadow(7px 7px 30px #fff);
+    }
+
+    25% {
+        left: 100px;
+        color: #fff;
+        filter: drop-shadow(7px 7px 30px #fff);
+    }
+
+    26% {
+        color: rgb(8, 255, 200);
+        filter: drop-shadow(-7px -7px 30px rgb(8, 255, 200));
+    }
+
+    50% {
+        top: 355px;
+        left: 50%;
+        color: rgb(8, 255, 200);
+        filter: drop-shadow(-7px -7px 30px rgb(8, 255, 200));
+    }
+
+    51% {
+        color: rgb(255, 72, 0);
+        filter: drop-shadow(-5px 10px 30px rgb(255, 72, 0));
+    }
+
+    75% {
+        top: 160px;
+        left: 510px;
+        color: rgb(255, 72, 0);
+        filter: drop-shadow(-5px 10px 30px rgb(255, 72, 0));
+    }
+
+    76% {
+        color: rgb(167, 72, 255);
+        filter: drop-shadow(7px 10px 30px rgb(167, 72, 255));
+    }
+
+    100% {
+        top: 0;
+        color: rgb(167, 72, 255);
+        filter: drop-shadow(7px 10px 30px rgb(167, 72, 255));
+    }
+}
+
+.left-right {
+    width: 25px;
+    height: 150px;
+    background: rgb(8, 255, 200);
+    position: relative;
+    top: 120px;
+    animation: left 6s linear infinite;
+}
+
+@keyframes left {
+    0% {
+        background: transparent;
+    }
+
+    20% {
+        background: transparent;
+    }
+
+    21% {
+        background: rgb(8, 255, 200);
+    }
+
+    29% {
+        background: rgb(8, 255, 200);
+    }
+
+    30% {
+        background: transparent;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+.left-right::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(167, 72, 255);
+    left: 566px;
+    animation: right 6s linear infinite;
+}
+
+@keyframes right {
+    0% {
+        background: transparent;
+    }
+
+    70% {
+        background: transparent;
+    }
+
+    71% {
+        background: rgb(167, 72, 255);
+    }
+
+    79% {
+        background: rgb(167, 72, 255);
+    }
+
+    80% {
+        background: transparent;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+.top-bottom {
+    width: 150px;
+    height: 24px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 220px;
+    animation: top 6s linear infinite;
+}
+
+@keyframes top {
+    0% {
+        background: #fff;
+    }
+
+    10% {
+        background: #fff;
+    }
+
+    11% {
+        background: transparent;
+    }
+
+    99% {
+        background: transparent;
+    }
+
+    100% {
+        background: #fff;
+    }
+}
+
+.top-bottom::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 72, 0);
+    top: 396px;
+    left: 0px;
+    animation: bottom 6s linear infinite;
+}
+
+@keyframes bottom {
+    0% {
+        background: transparent;
+    }
+
+    45% {
+        background: transparent;
+    }
+
+    46% {
+        background: rgb(255, 72, 0);
+    }
+
+    55% {
+        background: rgb(255, 72, 0);
+    }
+
+    56% {
+        background: transparent;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+}
+
+.main:after {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -328px;
+    border-radius: 50%;
+    box-shadow: -35px 35px 0px 25px #f3e9c6;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.name h1{
+	font-size: 30px;
+	text-align:center;
+    animation: mybg 6s linear infinite;
+	-webkit-animation: mybg 6s linear infinite;	
+}
+
+@keyframes mybg {
+    0% {
+        top: 0px;
+        left: 307px;
+        color: #fff;
+        filter: drop-shadow(7px 7px 30px #fff);
+    }
+
+    25% {
+        left: 100px;
+        color: #fff;
+        filter: drop-shadow(7px 7px 30px #fff);
+    }
+
+    26% {
+        color: rgb(8, 255, 200);
+        filter: drop-shadow(-7px -7px 30px rgb(8, 255, 200));
+    }
+
+    50% {
+        top: 355px;
+        left: 50%;
+        color: rgb(8, 255, 200);
+        filter: drop-shadow(-7px -7px 30px rgb(8, 255, 200));
+    }
+
+    51% {
+        color: rgb(255, 72, 0);
+        filter: drop-shadow(-5px 10px 30px rgb(255, 72, 0));
+    }
+
+    75% {
+        top: 160px;
+        left: 510px;
+        color: rgb(255, 72, 0);
+        filter: drop-shadow(-5px 10px 30px rgb(255, 72, 0));
+    }
+
+    76% {
+        color: rgb(167, 72, 255);
+        filter: drop-shadow(7px 10px 30px rgb(167, 72, 255));
+    }
+
+    100% {
+        top: 0;
+        color: rgb(167, 72, 255);
+        filter: drop-shadow(7px 10px 30px rgb(167, 72, 255));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.walk {
+    position: absolute;
+    color: #f1d70d;
+    top: 380px;
+    right: -176px;
+}
+
+.walk marquee {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ukti {
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    width: 500px;
+    padding: 5px 5px 5px 50px;
+}
+
+.ukti marquee {
+    line-height: 30px;
+    height: 500px;
+    color: #f1d70d;
+    font-weight: bold;
+    font-style: italic;
+}
